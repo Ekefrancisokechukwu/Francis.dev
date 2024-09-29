@@ -9,7 +9,7 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="flex items-center  justify-between w-full lg:max-w-[63rem] md:max-w-[40rem] md:px-0 px-12 mx-auto">
+    <header className="flex items-center  justify-between w-full xl:max-w-[63rem] lg:max-w-[55rem] md:max-w-[40rem] md:px-0 sm:px-12  px-6 mx-auto">
       <Link href={"/"}>
         <Image
           src={"/profile.jpeg"}

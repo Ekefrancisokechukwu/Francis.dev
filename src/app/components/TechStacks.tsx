@@ -77,7 +77,7 @@ const TechStacks = () => {
         {jsFullStackTools.map((stack, i) => (
           <div
             key={i}
-            className="border dark:border-zinc-50/10 rounded-full cursor-default p-3 text-sm dark:hover:bg-transparent dark:text-zinc-400 text-zinc-800 hover:bg-gray-100 transition-colors duration-200"
+            className="border dark:border-zinc-50/10 rounded-full cursor-default sm:p-3 p-2 sm:text-sm text-xs dark:hover:bg-transparent dark:text-zinc-400 text-zinc-800 hover:bg-gray-100 transition-colors duration-200"
           >
             {stack}
           </div>

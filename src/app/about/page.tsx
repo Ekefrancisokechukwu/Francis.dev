@@ -4,10 +4,10 @@ import Heading from "../components/Heading";
 
 const AboutPage = () => {
   return (
-    <div className="w-full max-w-[63rem] mx-auto mt-24 pb-16">
-      <div className="flex gap-x-[5rem] ">
+    <div className="w-full xl:max-w-[63rem] lg:max-w-[55rem] md:max-w-[40rem] md:px-0 sm:px-12  px-6  mx-auto mt-24 pb-16">
+      <div className="flex gap-x-[5rem] lg:flex-row flex-col-reverse ">
         <div className="max-w-[37rem]">
-          <Heading text="Solfware developer, UI Specialist" className="mt-5" />
+          <Heading text="Software developer, UI Specialist" className="mt-5" />
           <div className="mt-12">
             <p>
               Hi, let me tell you about myself. I am a web developer and
@@ -26,7 +26,7 @@ const AboutPage = () => {
           </div>
         </div>
         <div>
-          <div className="size-[16rem] rotate-12 hover:rotate-0 transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] p-2 rounded-3xl border shadow-2xl hover:shadow-lg">
+          <div className="size-[16rem] rotate-12 hover:rotate-0 sm:ml-0 ml-4 transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] p-2 rounded-3xl border shadow-2xl hover:shadow-lg">
             <Image
               src="/profile.jpeg"
               alt="my profile pic"

@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ThemeProvider>
+    <ThemeProvider>
+      <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 md:px-12 dark:bg-black`}
         >
@@ -38,7 +38,7 @@ export default function RootLayout({
             <Footer />
           </main>
         </body>
-      </ThemeProvider>
-    </html>
+      </html>
+    </ThemeProvider>
   );
 }

@@ -65,7 +65,7 @@ const WorkExperince = () => {
         {experiences.map((expenrience, i) => {
           return (
             <div key={i} className="flex items-center gap-x-3">
-              <div className="size-[2.5rem] border inline-block rounded-full p-1">
+              <div className="size-[2.5rem] flex-shrink-0 border inline-block rounded-full p-1">
                 <Image
                   src={expenrience.image}
                   alt="dropdefi logo"
@@ -75,14 +75,14 @@ const WorkExperince = () => {
                 />
               </div>
               <div>
-                <h2 className="font-medium text-zinc-700 dark:text-zinc-100">
+                <h2 className="font-medium sm:text-base text-sm text-zinc-700 dark:text-zinc-100">
                   {expenrience.company}
                 </h2>
-                <p className="text-xs text-zinc-500 capitalize">
+                <p className="text-xs text-zinc-500 capitalize truncate sm:w-auto w-28">
                   {expenrience.role} ({expenrience.type})
                 </p>
               </div>
-              <div className="text-sm text-zinc-400 ms-auto self-end">
+              <div className="sm:text-sm text-xs text-zinc-400 ms-auto self-end">
                 {expenrience.startYear} — {expenrience.endDate}
               </div>
             </div>

@@ -8,7 +8,7 @@ const projects = [
     des: "A customizable portfolio platform similar to Linktree, allowing users to create a personalized page showcasing their information and important links.",
     img: "/sy.png",
     link: {
-      href: "",
+      href: "https://synchub.vercel.app/",
       label: "synchub",
     },
   },
@@ -17,8 +17,17 @@ const projects = [
     des: "A beautiful UI analytics dashboard that is highly responsive and well-optimized, providing a seamless user experience across various devices.",
     img: "/default.avif",
     link: {
-      href: "",
+      href: "https://metrix-dashboard-ten.vercel.app/",
       label: "Metrix",
+    },
+  },
+  {
+    title: "Sythensis Landing page",
+    des: "Synthetix offers AI-powered data analytics, automation, and visualization solutions for industries like healthcare, finance, and retail. With over 12 years of experience and a high client satisfaction rate, it helps businesses optimize operations using advanced AI insights.",
+    img: "/Synthetix.png",
+    link: {
+      href: "https://synthesis-two.vercel.app/",
+      label: "Sythensis",
     },
   },
   {
@@ -26,7 +35,7 @@ const projects = [
     des: "An e-commerce website offering a seamless shopping experience with a wide range of products, secure checkout, and user-friendly interface.",
     img: "/default.avif",
     link: {
-      href: "",
+      href: "https://specter-store.vercel.app/",
       label: "Specter",
     },
   },
@@ -34,7 +43,7 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="mx-auto w-full max-w-[63rem] mt-20 pb-20">
+    <div className="mx-auto w-full xl:max-w-[63rem] lg:max-w-[55rem] md:max-w-[40rem] md:px-0 sm:px-12  px-6  mt-20 pb-20">
       <div className="max-w-[38rem]">
         <Heading
           className="!leading-tight"
@@ -46,31 +55,34 @@ const ProjectsPage = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 mt-12 gap-5">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-12 gap-5">
         {projects.map((project, i) => {
           return (
             <Link
               href={project.link.href}
               key={i}
-              className="p-5 relative z-10 group  rounded-xl"
+              target="_blank"
+              className="p-5 relative z-10 group  rounded-xl flex flex-col justify-between"
             >
               <div className="bg-zinc-50 dark:bg-zinc-800/10 scale-95 invisible group-hover:visible group-hover:scale-100 group-hover:transition-all group-hover:duration-200 absolute inset-0 w-full h-full rounded-xl -z-10 "></div>
-              <div className="size-[3rem] rounded-full border p-2 grid place-items-center">
-                <Image
-                  src={project.img}
-                  alt=""
-                  width={800}
-                  height={800}
-                  className="object-cover rounded-full"
-                />
-              </div>
-              <h1 className="mt-6 text-zinc-800  dark:text-zinc-100 capitalize font-semibold text-base">
-                {project.title}
-              </h1>
 
-              <p className="text-sm mt-2 text-zinc-600 dark:text-zinc-400">
-                {project.des}
-              </p>
+              <div>
+                <div className="size-[3rem] rounded-full border p-2 grid place-items-center">
+                  <Image
+                    src={project.img}
+                    alt=""
+                    width={800}
+                    height={800}
+                    className="object-cover rounded-full"
+                  />
+                </div>
+                <h1 className="mt-6 text-zinc-800  dark:text-zinc-100 capitalize font-semibold text-base">
+                  {project.title}
+                </h1>
+                <p className="text-sm mt-2 text-zinc-600 dark:text-zinc-400">
+                  {project.des}
+                </p>
+              </div>
 
               <div className="flex items-center gap-x-3 mt-4  *:group-hover:text-sky-300">
                 <svg

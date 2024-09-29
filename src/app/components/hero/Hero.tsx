@@ -15,12 +15,12 @@ const Hero = () => {
         />
       </div>
 
-      <Heading text="Solfware developer, UI Specialist" className="mt-6" />
+      <Heading text="Software developer, UI Specialist" className="mt-6" />
       <p className="mt-8 text-base text-zinc-600 dark:text-zinc-400">
-        I am a full-stack software developer with a passion for creating
-        efficient and optimized web user interfaces. My expertise lies in both
-        frontend and backend development, ensuring a seamless and engaging user
-        experience.
+        I am Eke Francis Okechukwu a full-stack Software developer with a
+        passion for creating efficient and optimized web user interfaces. My
+        expertise lies in both frontend and backend development, ensuring a
+        seamless and engaging user experience.
       </p>
       <div className="mt-6">
         <ul className="flex items-center  gap-x-6">

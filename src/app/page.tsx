@@ -4,7 +4,7 @@ import WorkExperince from "./components/WorkExperince";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full lg:max-w-[63rem] md:max-w-[40rem] md:px-0 px-12  mx-auto">
+    <div className="min-h-screen w-full xl:max-w-[63rem] lg:max-w-[55rem] md:max-w-[40rem] md:px-0 sm:px-12  px-6  mx-auto">
       <Hero />
       <div className="mt-16 flex lg:flex-row flex-col gap-y-8  gap-x-8 pb-20">
         <div className="flex-grow-[3]">
