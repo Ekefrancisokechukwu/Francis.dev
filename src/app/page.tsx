@@ -1,6 +1,28 @@
 import Hero from "./components/hero/Hero";
 import TechStacks from "./components/TechStacks";
 import WorkExperince from "./components/WorkExperince";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Eke Francis okechukwu - Portfolio",
+  description:
+    "I'm a software developer who loves crafting beautiful website UIs",
+  openGraph: {
+    type: "website",
+    url: "https://ekefrancisokechukwu.vercel.app",
+    title: "Eke Francis okechukwu - Portfolio",
+    description:
+      "I'm a software developer who loves crafting beautiful website UIs",
+    images: [
+      {
+        url: "https://ekefrancisokechukwu.vercel.app/about-me.png",
+        width: 1200,
+        height: 630,
+        alt: "Eke Francis Okechukwu - Software Developer",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (
