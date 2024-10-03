@@ -22,6 +22,15 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    site: "@EkeTechSpecter",
+    creator: "@EkeTechSpecter",
+    title: "Eke Francis okechukwu - Portfolio",
+    description:
+      "I'm a software developer who loves crafting beautiful website UIs",
+    images: ["https://ekefrancisokechukwu.vercel.app/about-me.png"],
+  },
 };
 
 export default function Home() {
