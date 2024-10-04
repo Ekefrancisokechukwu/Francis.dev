@@ -46,6 +46,7 @@ const Menu = () => {
             {links.map((link, i) => (
               <li key={i}>
                 <Link
+                  onClick={toggleMenu}
                   href={`/${link}`}
                   className="text-sm font-medium transition-colors duration-300 capitalize py-3 dark:text-zinc-50 inline-block w-full hover:text-sky-500 dark:hover:text-sky-400"
                 >
