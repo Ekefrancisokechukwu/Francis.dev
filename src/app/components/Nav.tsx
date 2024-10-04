@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const links = ["about", "projects"];
+const links = ["about", "projects", "components"];
 
 const Nav = () => {
   const pathname = usePathname();

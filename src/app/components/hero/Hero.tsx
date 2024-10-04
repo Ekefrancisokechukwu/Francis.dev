@@ -1,11 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Heading from "../Heading";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
+  const { scrollY } = useScroll();
+  const scale = useTransform(scrollY, [0, 200], [1, 0.5]);
+
   return (
     <div className="mt-[5rem]  max-w-lg ">
-      <div>
+      <motion.div style={{ scale, transformOrigin: "left" }}>
         <Image
           src={"/profile.jpeg"}
           alt="profile"
@@ -13,7 +19,7 @@ const Hero = () => {
           height={1000}
           className="rounded-full w-16 h-16 object-cover"
         />
-      </div>
+      </motion.div>
 
       <Heading text="Software developer, UI Specialist" className="mt-6" />
       <p className="mt-8 text-base text-zinc-600 dark:text-zinc-400">
