@@ -29,7 +29,12 @@ export const metadata: Metadata = {
     title: "Eke Francis okechukwu - Portfolio",
     description:
       "I'm a software developer who loves crafting beautiful website UIs",
-    images: ["https://ekefrancisokechukwu.vercel.app/about-me.png"],
+    images: [
+      {
+        url: "https://ekefrancisokechukwu.vercel.app/about-me.png",
+        alt: "Eke Francis Okechukwu - Software Developer",
+      },
+    ],
   },
 };
 

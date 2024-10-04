@@ -4,13 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const links = ["about", "projects", "components"];
+export const links = ["about", "projects", "components"];
 
 const Nav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="inline-block">
+    <nav className="sm:inline-block hidden">
       <ul className="flex items-center border dark:border-zinc-50/10 rounded-3xl shadow-sm px-2">
         {links.map((link, i) => {
           const isActive = pathname === `/${link}`;
