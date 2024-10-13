@@ -8,7 +8,7 @@ const ComponentsPage = () => {
       </h1>
       <p className="text-xl text-gray-600">
         Explore our comprehensive collection of reusable components, designed to
-        streamline your development process and enhance your project's user
+        streamline your development process and enhance your project&apos;s user
         experience.
       </p>
     </div>

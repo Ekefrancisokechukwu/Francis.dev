@@ -40,22 +40,22 @@ const ButtonsPage = () => {
     export default Nav;
   `;
 
-  const codeTest = `
-  import React from 'react';
+  // const codeTest = `
+  // import React from 'react';
 
-  const Greeting = ({ name }) => {
-    return <h1>Hello, {name}!</h1>;
-  };
+  // const Greeting = ({ name }) => {
+  //   return <h1>Hello, {name}!</h1>;
+  // };
 
-  export default Greeting;
-  `;
+  // export default Greeting;
+  // `;
   return (
     <div className="w-full">
       <h1 className="text-2xl font-bold mb-4">Buttons</h1>
       <Showcase
         preview
         tabIndex="btn-1"
-        sampleCode={codeTest}
+        sampleCode={reactComponentCode}
         title="Scale Btn"
       />
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
-import { FaSearch } from "react-icons/fa";
+// import Link from "next/link";
+// import { FaSearch } from "react-icons/fa";
 
 const NotFound = () => {
   return (
