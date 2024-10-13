@@ -12,6 +12,10 @@
   --foreground: #ededed;
 }
 
+/* * {
+  scrollbar-width: thin;
+} */
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -19,8 +23,32 @@ body {
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
+input {
+  outline: none;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+::-webkit-scrollbar-corner {
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100 rounded-l-xl;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 rounded-l-md relative;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400;
 }

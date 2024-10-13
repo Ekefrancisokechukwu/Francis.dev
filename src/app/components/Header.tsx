@@ -6,13 +6,14 @@ import Image from "next/image";
 import { useTheme } from "../Context";
 import Menu from "./Menu";
 import { useMenu } from "../context/MenuContext";
+import { ChevronIcon } from "../svg";
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const { toggleMenu } = useMenu();
 
   return (
-    <header className="flex items-center  justify-between w-full xl:max-w-[63rem] lg:max-w-[55rem] md:max-w-[40rem] md:px-0 sm:px-12  px-6 mx-auto">
+    <header className="flex items-center z-50  top-7  justify-between w-full xl:max-w-[63rem] lg:max-w-[55rem] md:max-w-[40rem] md:px-0 sm:px-12  px-6 mx-auto">
       <Link href={"/"}>
         <Image
           src={"/profile.jpeg"}
@@ -32,20 +33,7 @@ const Header = () => {
           className=" items-center sm:hidden flex p-[.5rem_.75rem] border dark:border-zinc-50/10 rounded-full shadow-sm transition-transform duration-200 ease-spring hover:scale-105 active:scale-95"
         >
           <span className="mr-2 text-sm">Menu</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-chevron-down"
-          >
-            <path d="m6 9 6 6 6-6" />
-          </svg>
+          <ChevronIcon />
         </button>
 
         <div className="">
