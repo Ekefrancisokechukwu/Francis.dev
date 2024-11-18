@@ -3,14 +3,18 @@
 import Link from "next/link";
 import Nav from "./Nav";
 import Image from "next/image";
-import { useTheme } from "../Context";
 import Menu from "./Menu";
 import { useMenu } from "../context/MenuContext";
 import { ChevronIcon } from "../svg";
+import { useTheme } from "next-themes";
 
 const Header = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
   const { toggleMenu } = useMenu();
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
     <header className="flex items-center z-50  top-7  justify-between w-full xl:max-w-[63rem] lg:max-w-[55rem] md:max-w-[40rem] md:px-0 sm:px-12  px-6 mx-auto">

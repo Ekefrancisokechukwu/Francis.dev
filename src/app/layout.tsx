@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ThemeProvider from "./Context";
 import { MenuProvider } from "./context/MenuContext";
+import { ThemeProvider } from "@/provider/ThemeProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,10 +28,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ThemeProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 md:px-12 dark:bg-black`}
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 md:px-12 dark:bg-black`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
           <MenuProvider>
             <main className="min-h-screen w-full lg:max-w-6xl   flex flex-col justify-between dark:bg-zinc-900   border-x dark:border-zinc-50/20 mx-auto bg-white pt-5">
@@ -40,8 +45,8 @@ export default function RootLayout({
               <Footer />
             </main>
           </MenuProvider>
-        </body>
-      </html>
-    </ThemeProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

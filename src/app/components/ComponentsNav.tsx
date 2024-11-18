@@ -21,6 +21,10 @@ export const componentLinks = [
     label: "chips",
   },
   // {
+  //   href: "/components/sliders",
+  //   label: "Sliders",
+  // },
+  // {
   //   href: "/components/file-uploader",
   //   label: "file uploader",
   // },

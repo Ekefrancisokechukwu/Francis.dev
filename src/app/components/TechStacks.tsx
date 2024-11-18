@@ -24,8 +24,8 @@ const jsFullStackTools = [
 
   // APIs
   "RESTful APIs",
-  "GraphQL",
-  "Apollo",
+  // "GraphQL",
+  // "Apollo",
 
   // Testing
   "Jest",

@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const experiences = [
   {
-    company: "dropdefi",
+    company: "Dropdefi",
     role: "front developer",
     type: "Part Time",
     startYear: "2024",
-    endDate: "present",
+    endDate: "Dec 2024",
     image: "/dropdefi_logo.jpeg",
   },
   {
