@@ -1,8 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import Heading from "../components/Heading";
-import Link from "next/link";
+import ProjectPreview from "./Preview";
+import { useState } from "react";
 
-const projects = [
+export type ProjectProps = {
+  title: string;
+  des: string;
+  img: string;
+  link: {
+    href: string;
+    label: string;
+  };
+  githubLink: string;
+  images: string[];
+  video: string;
+  tools: string[];
+};
+
+const projects: ProjectProps[] = [
   {
     title: "synchub",
     des: "A customizable portfolio platform similar to Linktree, allowing users to create a personalized page showcasing their information and important links.",
@@ -11,6 +28,19 @@ const projects = [
       href: "https://synchub.vercel.app/",
       label: "synchub",
     },
+    githubLink: "https://github.com/Ekefrancisokechukwu/Synchub",
+    images: ["/lin-2.png", "/lin-1.png", "/lin-3.png", "/lin-4.png"],
+    video: "/sync_v.mp4",
+    tools: [
+      "Shadcn UI",
+      "Tailwind Css",
+      "Next.js",
+      "Typescript",
+      "Clerk AUTH",
+      "Zustand",
+      "Convex DB",
+      "Vercel Deploy",
+    ],
   },
   {
     title: "Metrix Dashboard",
@@ -20,6 +50,10 @@ const projects = [
       href: "https://metrix-dashboard-ten.vercel.app/",
       label: "Metrix",
     },
+    video: "/met_v.mp4",
+    githubLink: "https://github.com/Ekefrancisokechukwu/metrix-dashboard",
+    images: ["/met-1.png"],
+    tools: ["Rechart js", "Next.js", "Javascript", "Styled components"],
   },
   {
     title: "Sythensis Landing page",
@@ -29,6 +63,10 @@ const projects = [
       href: "https://synthesis-two.vercel.app/",
       label: "Sythensis",
     },
+    video: "/web3_v.mp4",
+    githubLink: "https://github.com/Ekefrancisokechukwu/synthesis",
+    images: ["/sy-1.png", "/sy-2.png"],
+    tools: ["Next.js", "Framer motion", "Javascript", "Tailwind Css"],
   },
   {
     title: "Specter Store",
@@ -38,12 +76,43 @@ const projects = [
       href: "https://specter-store.vercel.app/",
       label: "Specter",
     },
+    video: "/spec-v.mp4",
+    githubLink: "https://github.com/Ekefrancisokechukwu/Specter_store",
+    images: [
+      "/spec-1.png",
+      "/spec-2.png",
+      "/spec-3.png",
+      "/spec-4.png",
+      "/spec-5.png",
+    ],
+    tools: [
+      "Next.js",
+      "Framer motion",
+      "Javascript",
+      "Tailwind Css",
+      "Redux Toolkit",
+      "Shadcn UI",
+    ],
   },
 ];
 
 const ProjectsPage = () => {
+  const [isPreviewOpen, setIspreviewOpen] = useState(false);
+  const [previewProject, setPreviewPoject] = useState<ProjectProps | null>(
+    null
+  );
+
+  function closeIsPreview() {
+    setIspreviewOpen(false);
+    setPreviewPoject(null);
+  }
+
   return (
-    <div className="mx-auto w-full xl:max-w-[63rem] lg:max-w-[55rem] md:max-w-[40rem] md:px-0 sm:px-12  px-6  mt-20 pb-20">
+    <div
+      className={
+        "mx-auto w-full xl:max-w-[63rem] lg:max-w-[55rem] md:max-w-[40rem] md:px-0 sm:px-12  px-6  mt-20 pb-20"
+      }
+    >
       <div className="max-w-[38rem]">
         <Heading
           className="!leading-tight"
@@ -58,10 +127,12 @@ const ProjectsPage = () => {
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-12 gap-5">
         {projects.map((project, i) => {
           return (
-            <Link
-              href={project.link.href}
+            <button
               key={i}
-              target="_blank"
+              onClick={() => {
+                setPreviewPoject(project);
+                setIspreviewOpen(true);
+              }}
               className="p-5 relative z-10 group  rounded-xl flex flex-col justify-between"
             >
               <div className="bg-zinc-50 dark:bg-zinc-800/10 scale-95 invisible group-hover:visible group-hover:scale-100 group-hover:transition-all group-hover:duration-200 absolute inset-0 w-full h-full rounded-xl -z-10 "></div>
@@ -105,10 +176,15 @@ const ProjectsPage = () => {
                   {project.link.label}
                 </p>
               </div>
-            </Link>
+            </button>
           );
         })}
       </div>
+      <ProjectPreview
+        selectedProject={previewProject!}
+        isPreviewOpen={isPreviewOpen}
+        closePreview={closeIsPreview}
+      />
     </div>
   );
 };
