@@ -26,7 +26,7 @@ const ProjectPreview = ({
       ></div>
       <div
         className={cn(
-          "sm:w-[80vw] w-[95vw] transition-all duration-500  grid lg:grid-cols-[auto_1fr] grid-cols-1 p-1 overflow-y-auto bg-white dark:bg-zinc-900 h-[90vh] fixed top-1/2 left-1/2 z-50 rounded-lg -translate-y-1/2 -translate-x-1/2",
+          "sm:w-[80vw] w-[95vw] transition-all duration-500  grid lg:grid-cols-[auto_1fr] grid-cols-1 p-1 lg:overflow-visible overflow-y-auto bg-white dark:bg-zinc-900 h-[90vh] fixed top-1/2 left-1/2 z-50 rounded-lg -translate-y-1/2 -translate-x-1/2",
           isPreviewOpen
             ? "opacity-100 visible scale-100"
             : "opacity-0 invisible scale-95"
@@ -34,7 +34,7 @@ const ProjectPreview = ({
       >
         <button
           onClick={closePreview}
-          className="bg-white/85 size-[2rem] ms-auto grid place-items-center rounded-full lg:absolute -right-10  top-0"
+          className="bg-white/85 size-[2rem]  ms-auto grid place-items-center rounded-full lg:absolute -right-10  top-0"
         >
           <X />
         </button>
