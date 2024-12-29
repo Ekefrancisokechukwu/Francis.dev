@@ -251,7 +251,7 @@ const MultiSelect = () => {
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     placeholder="Search here"
-                    className="text-sm w-full py-1.5 ml-2 text-zinc-500"
+                    className="text-sm w-full bg-transparent py-1.5 ml-2 text-zinc-500"
                   />
                 </div>
               </div>

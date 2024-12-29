@@ -26,7 +26,7 @@ const ProjectPreview = ({
       ></div>
       <div
         className={cn(
-          "sm:w-[80vw] w-[95vw] transition-all duration-500  grid lg:grid-cols-[auto_1fr] grid-cols-1 p-1 lg:overflow-visible overflow-y-auto bg-white dark:bg-zinc-900 h-[90vh] fixed top-1/2 left-1/2 z-50 rounded-lg -translate-y-1/2 -translate-x-1/2",
+          "sm:max-w-[70rem] w-[95vw] transition-all duration-500  grid lg:grid-cols-[auto_1fr] grid-cols-1 p-1 lg:overflow-visible overflow-y-auto bg-white dark:bg-zinc-900 h-[90vh] fixed top-1/2 left-1/2 z-50 rounded-lg -translate-y-1/2 -translate-x-1/2",
           isPreviewOpen
             ? "opacity-100 visible scale-100"
             : "opacity-0 invisible scale-95"
@@ -36,7 +36,7 @@ const ProjectPreview = ({
           onClick={closePreview}
           className="bg-white/85 size-[2rem]  ms-auto grid place-items-center rounded-full lg:absolute -right-10  top-0"
         >
-          <X />
+          <X className="dark:text-black" />
         </button>
         {selectedProject && (
           <>
@@ -102,14 +102,14 @@ const ProjectPreview = ({
                   {selectedProject.images.map((img, i) => (
                     <div
                       key={i}
-                      className="h-[28rem] w-full p-1.5 bg-gray-100 rounded-lg"
+                      className="sm:h-[28rem] h-[20rem] w-full p-1.5 bg-gray-100 dark:bg-gray-600/50 rounded-lg"
                     >
                       <Image
                         src={img}
                         alt="project image"
                         width={800}
                         height={800}
-                        className="w-full h-full rounded-lg"
+                        className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
                   ))}
