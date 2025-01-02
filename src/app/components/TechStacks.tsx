@@ -31,19 +31,14 @@ const jsFullStackTools = [
   "Jest",
 
   // DevOps & Deployment
-  // "Git",
+  "Git",
   // "Docker",
   // "Kubernetes",
   // "CI/CD (e.g., Jenkins, GitHub Actions)",
   // "AWS/Azure/GCP",
 
-  // Package Managers
-  "npm",
-  "Yarn",
-
   // Other
   "WebSockets",
-  "JWT",
   "OAuth",
   // "Microservices",
   // "Serverless Functions",
