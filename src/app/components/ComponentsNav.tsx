@@ -12,6 +12,10 @@ export const componentLinks = [
     href: "/components/multi-select",
     label: "multi Combobox",
   },
+  {
+    href: "/components/need-help",
+    label: "Need help UI",
+  },
   // {
   //   href: "/components/buttons",
   //   label: "Buttons",

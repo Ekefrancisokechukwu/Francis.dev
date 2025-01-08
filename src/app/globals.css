@@ -52,3 +52,11 @@ input {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-neutral-400;
 }
+
+input {
+  background-color: transparent;
+}
+
+textarea {
+  background-color: transparent;
+}
