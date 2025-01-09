@@ -9,6 +9,10 @@ export const componentLinks = [
     label: "checkbox",
   },
   {
+    href: "/components/navbars",
+    label: "Navbars",
+  },
+  {
     href: "/components/multi-select",
     label: "multi Combobox",
   },
