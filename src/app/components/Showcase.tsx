@@ -25,10 +25,7 @@ const Showcase = ({ sampleCode, title, preview, tabIndex }: ShowcaseProps) => {
     <div className="my-6">
       <div className="flex items-center justify-between mb-5">
         <div className="text-lg font-semibold mb-2">{title}</div>
-        <motion.div
-          layout
-          className="inline-flex items-center text-sm p-[2px] font-medium  rounded-md bg-gray-100 dark:bg-zinc-600/50"
-        >
+        <div className="inline-flex items-center text-sm p-[2px] font-medium  rounded-md bg-gray-100 dark:bg-zinc-600/50">
           <motion.button
             onClick={() => setTab("preview")}
             className="inline-flex items-center gap-x-2 rounded-md text-sm z-10 py-1 px-3 relative"
@@ -61,7 +58,7 @@ const Showcase = ({ sampleCode, title, preview, tabIndex }: ShowcaseProps) => {
               />
             )}
           </motion.button>
-        </motion.div>
+        </div>
       </div>
       {tab === "preview" ? (
         <div className="dark:bg-black min-h-32 z-10 relative overflow-hidden grid place-items-center border dark:border-zinc-50/30 rounded-lg p-3">
