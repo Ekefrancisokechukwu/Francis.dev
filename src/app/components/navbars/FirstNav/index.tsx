@@ -19,7 +19,7 @@ const FirstNav = () => {
         <Showcase
           tabIndex="first-nav"
           preview={<Preview />}
-          title=""
+          title="Navbars"
           sampleCode={codeSample}
         />
       ) : (

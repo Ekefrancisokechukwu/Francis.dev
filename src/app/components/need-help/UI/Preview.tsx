@@ -209,8 +209,8 @@ const Preview = () => {
           initial={false}
           layoutId="help-panel"
           variants={buttonVariant}
-          // initial="initial"
           whileHover="hover"
+          style={{ transformOrigin: "center" }}
           className="border relative bg-white py-3 px-4 rounded-full font-semibold text-sm text-neutral-600 flex items-center gap-2"
         >
           <motion.div layoutId="action-icon" variants={iconVariant}>

@@ -1,4 +1,8 @@
-import UI from "./UI";
+import dynamic from "next/dynamic";
+
+const UI = dynamic(() => import("./UI"), {
+  ssr: false,
+});
 
 const NeedHelpUIPage = () => {
   return (
