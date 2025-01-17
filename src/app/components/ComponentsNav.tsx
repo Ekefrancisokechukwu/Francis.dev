@@ -32,10 +32,10 @@ export const componentLinks = [
   //   href: "/components/sliders",
   //   label: "Sliders",
   // },
-  // {
-  //   href: "/components/file-uploader",
-  //   label: "file uploader",
-  // },
+  {
+    href: "/components/uploads",
+    label: "uploads",
+  },
 ];
 
 const ComponentsNav = () => {

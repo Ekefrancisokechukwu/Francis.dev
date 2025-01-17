@@ -97,38 +97,6 @@ const WorkExperince = () => {
         className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-6 w-full relative"
       >
         View Resume
-        <div className="relative overflow-hidden w-[15px] h-[15px]">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-move-down text-zinc-500 absolute top-0 group-hover:translate-y-[100%] transition-transform duration-300"
-          >
-            <path d="M8 18L12 22L16 18" />
-            <path d="M12 2V22" />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="15"
-            height="15"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-move-down text-zinc-500 absolute top-[-100%] group-hover:translate-y-[100%] transition-transform duration-300"
-          >
-            <path d="M8 18L12 22L16 18" />
-            <path d="M12 2V22" />
-          </svg>
-        </div>
       </Link>
     </div>
   );

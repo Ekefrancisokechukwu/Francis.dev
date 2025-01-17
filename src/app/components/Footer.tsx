@@ -19,7 +19,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="text-zinc-400 sm:text-base text-sm">
-          © 2024 Eke Francis. All rights reserved.
+          © {new Date().getFullYear()} Eke Francis. All rights reserved.
         </div>
       </div>
     </footer>
