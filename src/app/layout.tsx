@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 md:px-12 dark:bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-gray-100 md:px-12 dark:bg-black`}
       >
         <ThemeProvider
           attribute="class"

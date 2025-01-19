@@ -44,7 +44,7 @@ const Preview = () => {
       <motion.nav
         layoutRoot
         layout="position"
-        className="p-1 border  dark:border-gray-500/50 rounded-xl bg-white dark:bg-black/90 flex items-center "
+        className="p-1 border  dark:border-gray-500/50 rounded-xl bg-white dark:bg-black/90 flex md:flex-row flex-col items-center "
       >
         {navs.map((nav, i) => {
           return (

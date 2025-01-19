@@ -118,41 +118,39 @@ const Preview = () => {
 
   return (
     <div>
-      <div>
-        <ul className="flex items-center gap-x-7">
-          <div
-            style={{
-              left: hoverPosition.left,
-              width: hoverPosition.width,
-              opacity: hoveredItem !== null ? 1 : 0,
-            }}
-            className={`absolute rounded-full bg-gray-100 ease-spring duration-500 h-[3rem] top-1/2 -translate-y-1/2`}
-          />
+      <ul className="flex items-center gap-x-7">
+        <div
+          style={{
+            left: hoverPosition.left,
+            width: hoverPosition.width,
+            opacity: hoveredItem !== null ? 1 : 0,
+          }}
+          className={`absolute rounded-full bg-gray-100 ease-spring duration-500 h-[3rem] top-1/2 -translate-y-1/2`}
+        />
 
-          {navs.map((nav, i) => (
-            <li key={i} className="group">
-              <a
-                href="#"
-                ref={(el) => {
-                  navRefs.current[i] = el;
-                }}
-                onMouseEnter={() => handleMouseEnter(i)}
-                onMouseLeave={handleMouseLeave}
-                className="font-medium relative text-slate-800 dark:text-slate-300 hover:dark:text-slate-800 w-[8.5rem] px-8 py-2 rounded-3xl flex justify-center"
-              >
-                <span className="flex items-center relative gap-x-2">
-                  <span className="scale-0 origin-left absolute top-1/2 -translate-y-1/2 -left-2 group-hover:scale-100 transition-transform ease-in-out duration-300">
-                    {nav.icon}
-                  </span>
-                  <span className="transition-all group-hover:pl-5 ease-in-out duration-300">
-                    {nav.label}
-                  </span>
+        {navs.map((nav, i) => (
+          <li key={i} className="group">
+            <a
+              href="#"
+              ref={(el) => {
+                navRefs.current[i] = el;
+              }}
+              onMouseEnter={() => handleMouseEnter(i)}
+              onMouseLeave={handleMouseLeave}
+              className="font-medium relative text-slate-800 dark:text-slate-300 hover:dark:text-slate-800 w-[8.5rem] px-8 py-2 rounded-3xl flex justify-center"
+            >
+              <span className="flex items-center relative gap-x-2">
+                <span className="scale-0 origin-left absolute top-1/2 -translate-y-1/2 -left-2 group-hover:scale-100 transition-transform ease-in-out duration-300">
+                  {nav.icon}
                 </span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+                <span className="transition-all group-hover:pl-5 ease-in-out duration-300">
+                  {nav.label}
+                </span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
