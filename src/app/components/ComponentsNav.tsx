@@ -20,10 +20,10 @@ export const componentLinks = [
     href: "/components/need-help",
     label: "Need help UI",
   },
-  // {
-  //   href: "/components/buttons",
-  //   label: "Buttons",
-  // },
+  {
+    href: "/components/reactions",
+    label: "Reactions",
+  },
   {
     href: "/components/chips",
     label: "chips",

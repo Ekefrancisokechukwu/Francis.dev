@@ -65,7 +65,7 @@ const Showcase = ({ sampleCode, title, preview, tabIndex }: ShowcaseProps) => {
         </motion.div>
       </div>
       {tab === "preview" ? (
-        <div className="dark:bg-black min-h-32 z-10 relative overflow-hidden grid place-items-center border dark:border-zinc-50/30 rounded-lg p-3 overflow-x-auto">
+        <div className="dark:bg-black min-h-44 z-10 relative overflow-hidden grid place-items-center border dark:border-zinc-50/30 rounded-lg p-3 overflow-x-auto">
           {preview}
           <svg
             aria-hidden="true"
