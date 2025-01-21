@@ -28,10 +28,10 @@ export const componentLinks = [
     href: "/components/chips",
     label: "chips",
   },
-  // {
-  //   href: "/components/sliders",
-  //   label: "Sliders",
-  // },
+  {
+    href: "/components/handle-delete-dropdown",
+    label: "Handle Dropdown",
+  },
   {
     href: "/components/uploads",
     label: "uploads",
