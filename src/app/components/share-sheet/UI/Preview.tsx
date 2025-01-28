@@ -125,7 +125,7 @@ export const Preview = () => {
                   stiffness: 70,
                 }}
                 onClick={() => handleSelecteMember(member)}
-                className="w-full z-10 flex items-center px-2 py-1 group  relative  rounded-xl  gap-x-2 font-semibold text-sm"
+                className="w-full z-10 flex items-center px-2 py-1 group  text-black  relative  rounded-xl  gap-x-2 font-semibold text-sm"
               >
                 <div className="size-[2.5rem] rounded-full bg-gray-100 border group-hover:rounded-xl transition-all duration-300">
                   <Image
@@ -147,7 +147,6 @@ export const Preview = () => {
               animate={{
                 opacity: 1,
                 x: 0,
-                // top: "var(--hovered-top)",
               }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="w-[110%] absolute bg-white -z-10 shadow-md rounded-xl"
