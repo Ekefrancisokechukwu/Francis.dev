@@ -36,6 +36,10 @@ export const componentLinks = [
     href: "/components/uploads",
     label: "uploads",
   },
+  {
+    href: "/components/share-sheet",
+    label: "Share Sheet",
+  },
 ];
 
 const ComponentsNav = () => {
