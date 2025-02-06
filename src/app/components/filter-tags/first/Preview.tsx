@@ -2,7 +2,7 @@
 
 import { Plus, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { RiJavascriptFill } from "react-icons/ri";
 import { IoLogoCss3 } from "react-icons/io5";
 import { TbBrandReactNative } from "react-icons/tb";
@@ -12,6 +12,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { SiJest } from "react-icons/si";
 import { IconType } from "react-icons/lib";
 import { cn } from "@/lib/utils";
+import useClickOutside from "@/hooks/useClickOutside";
 
 interface IFilter {
   Icon: IconType;
@@ -31,7 +32,9 @@ const allFilters: IFilter[] = [
 const Preview = () => {
   const [appliedFilters, setAppliedFilters] = useState(allFilters.slice(0, 3));
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const containerRef = useRef(null);
+  const { element: containerRef } = useClickOutside(() =>
+    setIsDropdownOpen(false)
+  );
 
   const removeFilter = (filter: IFilter) => {
     setAppliedFilters((prev) => prev.filter((f) => f.text !== filter.text));
@@ -102,7 +105,7 @@ const Preview = () => {
                       <button
                         onClick={() => addFilter(f)}
                         key={index}
-                        className="inline-flex items-center gap-x-1.5 h-[2.5rem] px-1.5 hover:bg-neutral-50 rounded-lg hover:outline outline-2 "
+                        className="inline-flex items-center gap-x-1.5 h-[2.5rem] px-1.5 hover:bg-neutral-50 rounded-lg hover:outline outline-2 outline-black "
                       >
                         {<f.Icon className="text-neutral-600" />}
                         <span className="text-sm text-neutral-500 font-semibold">
