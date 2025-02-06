@@ -40,6 +40,10 @@ export const componentLinks = [
     href: "/components/share-sheet",
     label: "Share Sheet",
   },
+  {
+    href: "/components/filter-tags",
+    label: "Filter Tags",
+  },
 ];
 
 const ComponentsNav = () => {
