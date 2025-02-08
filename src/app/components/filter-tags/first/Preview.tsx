@@ -51,7 +51,7 @@ const Preview = () => {
 
   return (
     <div className="h-[35rem] grid place-items-center">
-      <div className="border w-[22rem] p-5 rounded-xl shadow-md bg-white ">
+      <div className="border sm:w-[22rem] w-full p-5 rounded-xl shadow-md bg-white ">
         <h1 className="font-bold text-sm text-neutral-500">Applied Filters</h1>
         <div className="mt-4">
           <motion.div

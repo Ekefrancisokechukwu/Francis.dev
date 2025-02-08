@@ -39,7 +39,7 @@ const ComponentSidebar = () => {
             <div key={index} className="text-white w-full">
               <Link
                 onClick={closeSideComponent}
-                className="text-sm font-medium w-full inline-block  py-1 px-2 text-zinc-900 capitalize  dark:text-zinc-700 hover:text-sky-500"
+                className="text-sm font-medium w-full inline-block  py-1 px-2 text-zinc-900 capitalize  dark:text-zinc-400 hover:text-sky-500"
                 href={component.href}
               >
                 {component.label}

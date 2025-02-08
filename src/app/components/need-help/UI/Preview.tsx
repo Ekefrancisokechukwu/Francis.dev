@@ -59,7 +59,7 @@ const Preview = () => {
               layoutId="help-panel"
               animate={report ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="w-[25rem] bg-white border rounded-2xl p-5"
+              className="sm:w-[25rem] w-full bg-white border rounded-2xl p-5"
             >
               <div className="flex items-center  justify-between  ">
                 <motion.h1
@@ -133,7 +133,7 @@ const Preview = () => {
             <motion.div
               layoutId="help-panel"
               layout="position"
-              className="w-[25rem] bg-white border rounded-2xl p-5"
+              className="sm:w-[25rem] w-full bg-white border rounded-2xl p-5"
             >
               <motion.button
                 layoutId="action-icon"
