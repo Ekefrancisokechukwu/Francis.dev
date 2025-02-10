@@ -44,6 +44,10 @@ export const componentLinks = [
     href: "/components/filter-tags",
     label: "Filter Tags",
   },
+  {
+    href: "/components/accordions",
+    label: "Accordions",
+  },
 ];
 
 const ComponentsNav = () => {
