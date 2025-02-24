@@ -3,6 +3,7 @@ import { Github, Link as LinkIcon, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectProps } from "../page";
+import VideoPlayer from "./VideoPlayer";
 
 interface ProjectPreviewProps {
   isPreviewOpen: boolean;
@@ -83,20 +84,7 @@ const ProjectPreview = ({
 
             <div className="lg:overflow-y-auto">
               <div className="py-7 px-1">
-                <div className="lg:h-[28rem] h-auto w-full">
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    style={{ width: "100%" }}
-                    aria-label="lady wearing google vision and pressing a keyboard"
-                    className="rounded-xl"
-                  >
-                    <source src={selectedProject.video} type="video/mp4" />
-                    <source src={selectedProject.video} type="video/webm" />
-                    Your browser is not supported!
-                  </video>
-                </div>
+                <VideoPlayer video={selectedProject.video} />
 
                 <div className="space-y-10 lg:mt-14 mt-5">
                   {selectedProject.images.map((img, i) => (
