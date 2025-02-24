@@ -46,7 +46,7 @@ export const projects: ProjectProps[] = [
     },
     video: "/gal-vid.mp4",
     githubLink: "https://github.com/Ekefrancisokechukwu/synthesis",
-    images: ["/gal-1.png", "/gal-2.png", "gal-3.png"],
+    images: ["/gal-1.png", "/gal-2.png", "/gal-3.png"],
     tools: [
       "Next.js",
       "Framer motion",
