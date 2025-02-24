@@ -45,7 +45,7 @@ export const projects: ProjectProps[] = [
       label: "Gallery",
     },
     video: "/gal-vid.mp4",
-    githubLink: "https://github.com/Ekefrancisokechukwu/synthesis",
+    githubLink: "https://github.com/Ekefrancisokechukwu/gallery-pics",
     images: ["/gal-1.png", "/gal-2.png", "/gal-3.png"],
     tools: [
       "Next.js",
