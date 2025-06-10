@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full  max-w-[40rem]  mx-auto">
+    <div className="min-h-screen w-full  max-w-[40rem]  mx-auto pb-5">
       <Hero />
       <Projects />
 

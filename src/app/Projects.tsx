@@ -45,7 +45,7 @@ export const Projects = () => {
       className="mt-[5rem]"
     >
       <h5 className="font-semibold  text-gray-300">Projects</h5>
-      <div className="mt-5 grid grid-cols-2 gap-5">
+      <div className="mt-5 grid  sm-[505px]:grid-cols-2 grid-cols-1 gap-5">
         {projects.map((project, i) => {
           return <SingleProject project={project as IProject} key={i} />;
         })}
