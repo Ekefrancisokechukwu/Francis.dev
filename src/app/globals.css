@@ -8,13 +8,9 @@
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: oklch(14.5% 0 0);
   --foreground: #ededed;
 }
-
-/* * {
-  scrollbar-width: thin;
-} */
 
 body {
   color: var(--foreground);
