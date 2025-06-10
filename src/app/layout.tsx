@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+
 import { MenuProvider } from "./context/MenuContext";
 import { ThemeProvider } from "@/provider/ThemeProvider";
+import { Inter } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-gray-100 md:px-12 dark:bg-black`}
+        className={`${inter.className} ${geistMono.variable} antialiased overflow-x-hidden bg-gray-100 md:px-12 dark:bg-[#0f0f0f] `}
       >
         <ThemeProvider
           attribute="class"
@@ -38,13 +38,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <MenuProvider>
-            <main className="min-h-screen w-full lg:max-w-6xl   flex flex-col justify-between dark:bg-zinc-900   border-x dark:border-zinc-50/20 mx-auto bg-white pt-5">
-              <Header />
-              {children}
-              <Footer />
-            </main>
-          </MenuProvider>
+          <MenuProvider>{children}</MenuProvider>
         </ThemeProvider>
       </body>
     </html>
