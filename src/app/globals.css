@@ -7,16 +7,15 @@
   --foreground: #171717;
 }
 
-.dark {
-  --background: oklch(14.5% 0 0);
-  --foreground: #ededed;
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+::selection {
+  @apply bg-neutral-800;
 }
 
 input {

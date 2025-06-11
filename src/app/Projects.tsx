@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { MouseEvent, useEffect, useRef } from "react";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 import { springValuesTransition } from "@/lib/utils";
 
@@ -60,17 +60,21 @@ interface ISingleproject {
 
 const SingleProject = ({ project }: ISingleproject) => {
   const glowBorderRef = useRef<HTMLDivElement | null>(null);
+  const divRef = useRef<HTMLDivElement | null>(null);
   const rawX = useMotionValue(-100);
   const rawY = useMotionValue(-100);
+  const spotlightX = useMotionValue(50);
+  const spotlightY = useMotionValue(50);
 
   const maskImage = useMotionTemplate`radial-gradient(100px 50px at ${rawX}px ${rawY}px, black, transparent`;
+  const spotlightPosition = useMotionTemplate`radial-gradient(circle at ${spotlightX}px  ${spotlightY}px,  rgba(255, 255, 255, 0.05), transparent 80%)`;
 
   useEffect(() => {
     const glowElement = glowBorderRef.current as HTMLDivElement;
 
     if (!glowBorderRef) return;
 
-    const updateMousePosition = (e: MouseEvent) => {
+    const updateMousePosition = (e: globalThis.MouseEvent) => {
       const { y, x } = e;
 
       const rect = glowElement.getBoundingClientRect();
@@ -86,8 +90,32 @@ const SingleProject = ({ project }: ISingleproject) => {
     };
   }, []);
 
+  const handleMouseMove = (
+    e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>
+  ) => {
+    if (!divRef.current) return;
+    const rect = divRef.current.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    spotlightX.set(x);
+    spotlightY.set(y);
+  };
+
   return (
-    <div className="rounded-md z-10 relative p-2 border border-neutral-700">
+    <div
+      onMouseMove={handleMouseMove}
+      ref={divRef}
+      className="rounded-md z-10 relative p-2 group border overflow-hidden border-neutral-700"
+    >
+      <motion.div
+        style={{
+          background: spotlightPosition,
+        }}
+        className="absolute -z-10 left-0 top-0  w-full h-full opacity-0 group-hover:opacity-70"
+      />
+
       <motion.div
         ref={glowBorderRef}
         style={{
@@ -106,7 +134,7 @@ const SingleProject = ({ project }: ISingleproject) => {
               className="rounded-full object-cover"
             />
           </div>
-          <span className="text-xs font-medium inline-block group-hover:underline underline-offset-4 ">
+          <span className="text-xs text-neutral-200 font-medium inline-block group-hover:underline underline-offset-4 ">
             {project.name}
           </span>
           <ArrowUpRight size={12} className="text-neutral-600" />
