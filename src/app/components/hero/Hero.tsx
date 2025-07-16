@@ -46,10 +46,10 @@ const Hero = () => {
         >
           Freelancer
         </Link>
-        . I build fast, responsive web apps using React, Next.js, and
-        Tailwind—clean UI, scalable architecture, and smooth user experiences. I
-        handle both frontend and backend, so clients get complete,
-        production-ready solutions without the overhead.
+        . I build fast, responsive web apps using React, Next.js, and Tailwind
+        clean UI, scalable architecture, and smooth user experiences. I handle
+        both frontend and backend, so clients get complete, production-ready
+        solutions without the overhead.
       </motion.p>
 
       <motion.div

@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { serialize } from "next-mdx-remote/serialize";
 
 export type Article = {
   title: string;
@@ -24,14 +23,13 @@ export function getAllArticles() {
   });
 }
 
-export async function getArticleBySlug(slug: string) {
+export function getArticleBySlug(slug: string) {
   const filePath = path.join(articlesDir, `${slug}.mdx`);
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { content, data } = matter(fileContents);
-  const mdxSource = await serialize(content);
 
   return {
-    mdxSource,
+    content,
     metadata: data as {
       title: string;
       description: string;

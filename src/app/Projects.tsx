@@ -8,25 +8,7 @@ import { MouseEvent, useEffect, useRef } from "react";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 import { springValuesTransition } from "@/lib/utils";
 import { Heading } from "@/components/ui/Heading";
-
-const projects = [
-  {
-    desc: "Clay AI is a polished and visually engaging SaaS landing page designed for an AI-powered platform. Built with modern web technologies and best practices, this project serves as a template or prototype for AI startups looking to showcase their product in a compelling and user-centered way.",
-    name: "Clay.ai",
-    link: "https://clay-ai.vercel.app/",
-    github: "https://github.com/Ekefrancisokechukwu/clay.ai",
-    icon: "/clay-ai.ico",
-    techStacks: ["React", "Motion", "Tailwind"],
-  },
-  {
-    desc: "Full-stack e-commerce website",
-    name: "storefront",
-    link: "https://francis-storefront-demo.vercel.app/",
-    github: "https://github.com/Ekefrancisokechukwu/francis-storefront-demo",
-    icon: "/pickriders-logo.jpeg",
-    techStacks: ["Next", "Motion", "Tailwind"],
-  },
-];
+import { projects } from "@/constants";
 
 interface IProject {
   desc: string;
@@ -108,7 +90,7 @@ const SingleProject = ({ project }: ISingleproject) => {
     <div
       onMouseMove={handleMouseMove}
       ref={divRef}
-      className="rounded-md flex flex-col z-10 h-[13rem] bg-neutral-900/80 relative p-2 group border overflow-hidden border-neutral-700"
+      className="rounded-md flex flex-col z-10 h-[13rem] bg-neutral-900/80 relative p-2 group border overflow-hidden border-neutral-800"
     >
       <motion.div
         style={{

@@ -1,20 +1,20 @@
 import { getArticleBySlug } from "@/lib/getArticles";
-// import { useMDXComponent } from "next/mdx";
 import { useMDXComponents } from "@/mdx-components";
+
 import { Undo2 } from "lucide-react";
-import { MDXRemote } from "next-mdx-remote";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 
 type Props = {
   params: { slug: string };
 };
 
-export default async function Article({ params }: Props) {
+export default function Article({ params }: Props) {
   const { slug } = params;
-  const { mdxSource, metadata } = await getArticleBySlug(slug);
+  const { content, metadata } = getArticleBySlug(slug);
 
   return (
-    <main className=" mx-auto max-w-[50rem] py-10 px-4">
+    <main className=" mx-auto max-w-[50rem] py-10 ">
       <div className="flex items-center justify-between">
         <Link
           href={"/"}
@@ -29,7 +29,7 @@ export default async function Article({ params }: Props) {
         <p className="text-gray-500 text-sm mb-8">{metadata.date}</p>
         <article className="prose prose-lg">
           <article className="prose prose-lg dark:prose-invert">
-            <MDXRemote {...mdxSource} />
+            <MDXRemote source={content} components={useMDXComponents({})} />
           </article>
         </article>
       </section>

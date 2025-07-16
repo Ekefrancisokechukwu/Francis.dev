@@ -15,22 +15,20 @@ const BlogPosts = () => {
       <div className="mt-5 space-y-3">
         {posts.map((post, index) => {
           return (
-            <div
+            <Link
               key={index}
-              className="p-2.5  flex min-[535px]:flex-row flex-col gap-y-1 min-[535px]:items-center items-start justify-between bg-neutral-900 rounded-lg"
+              href={`/articles/${post.slug}`}
+              className=" p-2.5 group flex min-[535px]:flex-row flex-col gap-y-1 min-[535px]:items-center items-start justify-between transition-colors duration-500 bg-neutral-900 rounded-lg"
             >
-              <Link
-                href={`/articles/${post.slug}`}
-                className="hover:underline text-base font-medium underline-offset-4"
-              >
-                {" "}
+              {" "}
+              <span className="group:underline text-base font-medium underline-offset-4">
                 {post.title}
-              </Link>
+              </span>
               <div className="flex items-center gap-x-2">
                 <Timer size={18} />
                 <span className="text-sm font-medium">Jun 12, 2025</span>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

@@ -3,8 +3,8 @@ import Hero from "./components/hero/Hero";
 import { Metadata } from "next";
 import { Projects } from "./Projects";
 // import { Spotlight } from "./components/ui/Spotlight";
-import Work from "./Work";
 import BlogPosts from "./BlogPosts";
+import InteractionsList from "./InteractionsList";
 
 export const metadata: Metadata = {
   title: "Eke Francis okechukwu - Portfolio",
@@ -48,7 +48,7 @@ export default function Home() {
 
       <Hero />
       <Projects />
-      <Work />
+      <InteractionsList />
       <BlogPosts />
 
       {/* <div className="absolute top-0 left-0  h-[30rem] w-[15rem] blur-sm -rotate-45" /> */}

@@ -2,8 +2,10 @@
 
 import { Heading } from "@/components/ui/Heading";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { Timer } from "lucide-react";
 
-const Work = () => {
+const InteractionsList = () => {
   return (
     <motion.div className="mt-[4rem]">
       <Heading>
@@ -22,7 +24,24 @@ const Work = () => {
           ></path>
         </svg>
       </Heading>
+
+      <div className="mt-5 space-y-3">
+        <Link
+          // key={index}
+          href={`/components/dnjd`}
+          className=" p-2.5 group flex min-[535px]:flex-row flex-col gap-y-1 min-[535px]:items-center items-start justify-between transition-colors duration-500 bg-neutral-900 rounded-lg"
+        >
+          {" "}
+          <span className="group:underline text-base font-medium underline-offset-4">
+            Speedometer
+          </span>
+          <div className="flex items-center gap-x-2">
+            <Timer size={15} />
+            <span className="text-sm font-medium">Jun 12, 2025</span>
+          </div>
+        </Link>
+      </div>
     </motion.div>
   );
 };
-export default Work;
+export default InteractionsList;
