@@ -135,7 +135,9 @@ const SingleProject = ({ project }: ISingleproject) => {
         </Link>
       </div>
 
-      <p className="mt-2 text-sm text-neutral-400">{project.desc}</p>
+      <p className="mt-2 text-sm text-neutral-400 line-clamp-6">
+        {project.desc}
+      </p>
 
       <div className=" mt-auto flex items-center gap-x-2">
         {project.techStacks.map((stack, i) => (
