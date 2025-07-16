@@ -16,15 +16,16 @@ const Hero = () => {
         style={{ scale, transformOrigin: "left" }}
         initial={{ opacity: 0, y: 30 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.1, ...springValuesTransition }}
+        transition={{ ...springValuesTransition }}
         className="size-[4rem] rounded-md relative"
       >
         <Image
           src={"/profile.jpeg"}
           alt="profile"
           fill
-          sizes="(max-width: 768px) 100vw, 33vw"
-          className="rounded-md object-cover"
+          sizes="200px"
+          // sizes="(max-width: 768px) 100vw, 33vw"
+          className="rounded-md w-full h-full object-cover"
           priority
         />
       </motion.div>
@@ -33,7 +34,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.1, delay: 0.2, ...springValuesTransition }}
-        className="mt-5 text-base  text-neutral-500"
+        className="mt-5 text-base  "
       >
         I&apos;m{" "}
         <span className="font-semibold  text-neutral-300">Francis</span> a

@@ -2,7 +2,9 @@ import Hero from "./components/hero/Hero";
 
 import { Metadata } from "next";
 import { Projects } from "./Projects";
-import { Spotlight } from "./components/ui/Spotlight";
+// import { Spotlight } from "./components/ui/Spotlight";
+import Work from "./Work";
+import BlogPosts from "./BlogPosts";
 
 export const metadata: Metadata = {
   title: "Eke Francis okechukwu - Portfolio",
@@ -41,22 +43,15 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full  max-w-[40rem]  mx-auto pb-5">
+    <div className="min-h-screen w-full  max-w-[50rem]  mx-auto pb-20">
+      {/* <Spotlight /> */}
+
       <Hero />
       <Projects />
-      <Spotlight />
+      <Work />
+      <BlogPosts />
 
       {/* <div className="absolute top-0 left-0  h-[30rem] w-[15rem] blur-sm -rotate-45" /> */}
-
-      {/* old */}
-      {/* <div className="mt-16 flex lg:flex-row flex-col gap-y-8  gap-x-8 pb-20">
-        <div className="flex-grow-[3]">
-          <TechStacks />
-        </div>
-        <div className="flex-grow-[2] shrink-0 lg:w-[25rem] w-full">
-          <WorkExperince />
-        </div>
-      </div> */}
     </div>
   );
 }

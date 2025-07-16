@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const springValuesTransition = {
   damping: 30,
-  stiffness: 100,
+  stiffness: 130,
   mass: 2,
   type: "spring",
 };

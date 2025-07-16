@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-import { MenuProvider } from "./context/MenuContext";
 import { ThemeProvider } from "@/provider/ThemeProvider";
 import { Inter } from "next/font/google";
 
@@ -38,7 +37,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <MenuProvider>{children}</MenuProvider>
+          {children}
         </ThemeProvider>
       </body>
     </html>
