@@ -26,10 +26,14 @@ input {
   .text-balance {
     text-wrap: balance;
   }
+
+  .absolute-center {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
 }
 
-::-webkit-scrollbar-corner {
-}
+/* ::-webkit-scrollbar-corner {
+} */
 
 ::-webkit-scrollbar {
   width: 6px;

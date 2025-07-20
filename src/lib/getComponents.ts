@@ -9,13 +9,13 @@ export type Article = {
   slug: string;
 };
 
-const articlesDir = path.join(process.cwd(), "src/content/articles/");
+const compoenntsDir = path.join(process.cwd(), "src/content/components/");
 
-export function getAllArticles() {
-  const files = fs.readdirSync(articlesDir);
+export function getAllComponents() {
+  const files = fs.readdirSync(compoenntsDir);
 
   return files.map((filename) => {
-    const filePath = path.join(articlesDir, filename);
+    const filePath = path.join(compoenntsDir, filename);
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContents);
 
@@ -23,8 +23,8 @@ export function getAllArticles() {
   });
 }
 
-export function getArticleBySlug(slug: string) {
-  const filePath = path.join(articlesDir, `${slug}.mdx`);
+export function getComponentBySlug(slug: string) {
+  const filePath = path.join(compoenntsDir, `${slug}.mdx`);
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { content, data } = matter(fileContents);
 

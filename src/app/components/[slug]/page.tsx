@@ -1,7 +1,18 @@
+// import { SpeedometerChart } from "@/components/ui/SpeedometerChart";
+import { getComponentBySlug } from "@/lib/getComponents";
+import { useMDXComponents } from "@/mdx-components";
 import { Undo2 } from "lucide-react";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 
-const ComponentPage = () => {
+type Props = {
+  params: { slug: string };
+};
+
+const ComponentPage = ({ params }: Props) => {
+  const { slug } = params;
+  const { content, metadata } = getComponentBySlug(slug);
+
   return (
     <div className="max-w-[50rem] mx-auto py-10">
       <div className="flex items-center justify-between">
@@ -13,8 +24,15 @@ const ComponentPage = () => {
         </Link>
       </div>
 
-      <div className="mt-10">
-        <div className="bg-neutral-900 border-neutral-600 rounded-xl p-5 min-h-[20rem] grid place-items-center"></div>
+      <div className="mt-[4rem]">
+        <h1 className="text-white font-semibold text-lg capitalize">
+          {metadata.title}
+        </h1>
+        <p>{metadata.description}</p>
+      </div>
+
+      <div className="mt-5">
+        <MDXRemote source={content} components={useMDXComponents({})} />
       </div>
     </div>
   );

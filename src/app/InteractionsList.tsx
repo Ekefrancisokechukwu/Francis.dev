@@ -1,13 +1,16 @@
-"use client";
-
 import { Heading } from "@/components/ui/Heading";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Link from "next/link";
 import { Timer } from "lucide-react";
+import { getAllComponents } from "@/lib/getComponents";
 
 const InteractionsList = () => {
+  const interaction = getAllComponents();
+
+  console.log(interaction, "Interactions");
+
   return (
-    <motion.div className="mt-[4rem]">
+    <div className="mt-[4rem]">
       <Heading>
         Interactions{" "}
         <svg
@@ -26,22 +29,24 @@ const InteractionsList = () => {
       </Heading>
 
       <div className="mt-5 space-y-3">
-        <Link
-          // key={index}
-          href={`/components/dnjd`}
-          className=" p-2.5 group flex min-[535px]:flex-row flex-col gap-y-1 min-[535px]:items-center items-start justify-between transition-colors duration-500 bg-neutral-900 rounded-lg"
-        >
-          {" "}
-          <span className="group:underline text-base font-medium underline-offset-4">
-            Speedometer
-          </span>
-          <div className="flex items-center gap-x-2">
-            <Timer size={15} />
-            <span className="text-sm font-medium">Jun 12, 2025</span>
-          </div>
-        </Link>
+        {interaction.map((component, index) => (
+          <Link
+            key={index}
+            href={`/components/${component.slug}`}
+            className=" p-2.5 group flex min-[535px]:flex-row flex-col gap-y-1 min-[535px]:items-center items-start justify-between transition-colors duration-500 bg-neutral-900 rounded-lg"
+          >
+            {" "}
+            <span className="group:underline text-base font-medium underline-offset-4">
+              {component.title}
+            </span>
+            <div className="flex items-center gap-x-2">
+              <Timer size={15} />
+              <span className="text-sm font-medium">Jun 12, 2025</span>
+            </div>
+          </Link>
+        ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 export default InteractionsList;
