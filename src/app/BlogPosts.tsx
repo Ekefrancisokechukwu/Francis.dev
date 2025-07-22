@@ -26,7 +26,7 @@ const BlogPosts = () => {
               </span>
               <div className="flex items-center gap-x-2">
                 <Timer size={15} />
-                <span className="text-sm font-medium">Jun 12, 2025</span>
+                <span className="text-sm font-medium">{post.date}</span>
               </div>
             </Link>
           );

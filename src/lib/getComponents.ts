@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { formatDate, parseISO } from "date-fns";
 
 export type Article = {
   title: string;
@@ -14,13 +15,21 @@ const compoenntsDir = path.join(process.cwd(), "src/content/components/");
 export function getAllComponents() {
   const files = fs.readdirSync(compoenntsDir);
 
-  return files.map((filename) => {
+  const components = files.map((filename) => {
     const filePath = path.join(compoenntsDir, filename);
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContents);
 
-    return { ...data, slug: filename.replace(".mdx", "") } as Article;
+    return {
+      ...data,
+      slug: filename.replace(".mdx", ""),
+      date: formatDate(parseISO(data.date), "MMM dd, yyyy"),
+    } as Article;
   });
+
+  return components.sort(
+    (a, b) => new Date(b.date).getDate() - new Date(a.date).getDate()
+  );
 }
 
 export function getComponentBySlug(slug: string) {

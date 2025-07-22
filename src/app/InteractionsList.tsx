@@ -1,13 +1,10 @@
 import { Heading } from "@/components/ui/Heading";
-// import { motion } from "framer-motion";
 import Link from "next/link";
 import { Timer } from "lucide-react";
 import { getAllComponents } from "@/lib/getComponents";
 
 const InteractionsList = () => {
   const interaction = getAllComponents();
-
-  console.log(interaction, "Interactions");
 
   return (
     <div className="mt-[4rem]">
@@ -41,7 +38,7 @@ const InteractionsList = () => {
             </span>
             <div className="flex items-center gap-x-2">
               <Timer size={15} />
-              <span className="text-sm font-medium">Jun 12, 2025</span>
+              <span className="text-sm font-medium">{component.date}</span>
             </div>
           </Link>
         ))}

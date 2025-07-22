@@ -11,7 +11,7 @@ const Hero = () => {
   const scale = useTransform(scrollY, [0, 200], [1, 0.5]);
 
   return (
-    <div className="mt-[5rem]   ">
+    <div className="mt-[5rem]">
       <motion.div
         style={{ scale, transformOrigin: "left" }}
         initial={{ opacity: 0, y: 30 }}
@@ -24,7 +24,6 @@ const Hero = () => {
           alt="profile"
           fill
           sizes="200px"
-          // sizes="(max-width: 768px) 100vw, 33vw"
           className="rounded-md w-full h-full object-cover"
           priority
         />
@@ -37,19 +36,8 @@ const Hero = () => {
         className="mt-5 text-base  "
       >
         I&apos;m{" "}
-        <span className="font-semibold  text-neutral-300">Francis</span> a
-        frontend-focused fullstack developer and{" "}
-        <Link
-          title="Contra profile"
-          href={"https://contra.com/francis_okechukwu_gm1f4lhz"}
-          className="font-semibold  text-neutral-300"
-        >
-          Freelancer
-        </Link>
-        . I build fast, responsive web apps using React, Next.js, and Tailwind
-        clean UI, scalable architecture, and smooth user experiences. I handle
-        both frontend and backend, so clients get complete, production-ready
-        solutions without the overhead.
+        <span className="font-semibold  text-neutral-300">Francis</span>, a
+        frontend-first fullstack developer and freelancer.
       </motion.p>
 
       <motion.div

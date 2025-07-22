@@ -24,7 +24,7 @@ export const Projects = () => {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.1, delay: 0.4, ...springValuesTransition }}
+      transition={{ delay: 0.4, ...springValuesTransition }}
       className="mt-[5rem]"
     >
       <Heading>Projects</Heading>
