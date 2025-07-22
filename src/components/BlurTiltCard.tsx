@@ -15,7 +15,7 @@ export const BlurTiltCard = () => {
           onHoverEnd={() => setHovered(false)}
           onTapStart={() => setHovered(true)}
           onTapCancel={() => setHovered(false)}
-          // onTap={() => setHovered(false)}
+          onTap={() => setHovered(false)}
           className="min-[380px]:w-[20rem] w-[18rem] h-[25rem] group rounded-xl overflow-hidden  relative"
         >
           <Image
@@ -38,13 +38,17 @@ export const BlurTiltCard = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, marginBottom: "-4rem" }}
+              initial={{ opacity: 0, marginBottom: "-5.5rem" }}
               animate={
                 hovered
                   ? { opacity: 1, marginBottom: "0" }
-                  : { opacity: 0, marginBottom: "-4rem" }
+                  : { opacity: 0, marginBottom: "-5.5rem" }
               }
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 30,
+              }}
               className="mt-4"
             >
               <button className="w-full  flex-auto mt-6 rounded-full py-3 font-semibold bg-white text-black">
