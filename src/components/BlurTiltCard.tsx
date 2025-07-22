@@ -13,9 +13,7 @@ export const BlurTiltCard = () => {
         <motion.div
           onHoverStart={() => setHovered(true)}
           onHoverEnd={() => setHovered(false)}
-          onTapStart={() => setHovered(true)}
-          onTapCancel={() => setHovered(false)}
-          onTap={() => setHovered(false)}
+          onClick={() => setHovered((prev) => !prev)}
           className="min-[380px]:w-[20rem] w-[18rem] h-[25rem] group rounded-xl overflow-hidden  relative"
         >
           <Image
