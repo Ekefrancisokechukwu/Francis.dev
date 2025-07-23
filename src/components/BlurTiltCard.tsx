@@ -8,7 +8,7 @@ export const BlurTiltCard = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div className="bg-neutral-900 border-neutral-600 rounded-xl sm:p-5 p-2 min-h-[20rem] grid place-items-center">
+    <div className=" border-neutral-600 rounded-xl sm:p-5 p-2 min-h-[20rem] grid place-items-center">
       <div className="rounded-xl">
         <motion.div
           onHoverStart={() => setHovered(true)}

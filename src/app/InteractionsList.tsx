@@ -30,10 +30,10 @@ const InteractionsList = () => {
           <Link
             key={index}
             href={`/components/${component.slug}`}
-            className=" p-2.5 group flex min-[535px]:flex-row flex-col gap-y-1 min-[535px]:items-center items-start justify-between transition-colors duration-500 bg-neutral-900 rounded-lg"
+            className=" p-2.5 group flex min-[535px]:flex-row flex-col gap-y-1 min-[535px]:items-center items-start justify-between transition-colors duration-500 hover:bg-neutral-900 rounded-lg"
           >
             {" "}
-            <span className="group:underline text-base font-medium underline-offset-4">
+            <span className="group:underline text-sm font-medium underline-offset-4">
               {component.title}
             </span>
             <div className="flex items-center gap-x-2">
