@@ -35,12 +35,12 @@ export const SharedLayoutModal = () => {
           <div className="grid sm:grid-cols-3 grid-cols-2  gap-3 items-center">
             {images.map((img, i) => (
               <motion.div
+                key={i}
                 layoutId={img.url}
                 transition={{
                   duration: 0.3,
                   ease: "easeInOut",
                 }}
-                key={i}
                 onClick={() => handleOpen(img.url)}
                 className="md:h-[15rem] md:w-[15rem] min-[450px]:size-[12rem] min-[370px]:size-[9rem]  size-[8rem] cursor-pointer"
               >

@@ -33,6 +33,16 @@ export const Projects = () => {
           return <SingleProject project={project as IProject} key={i} />;
         })}
       </div>
+
+      <div className="flex justify-center mt-8">
+        <Link
+          target="_blank"
+          href="https://docs.google.com/document/d/16JpGL9NRzCYwYXio_QgHj4w_9b3UnGclQbqNZ7c4hLg/edit?tab=t.0"
+          className="bg-neutral-900 rounded-lg px-5 py-2"
+        >
+          More
+        </Link>
+      </div>
     </motion.div>
   );
 };

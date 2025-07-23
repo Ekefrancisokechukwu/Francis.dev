@@ -3,10 +3,12 @@ import {
   SpeedometerChart,
   BlurTiltCard,
   SharedLayoutModal,
+  AnimatedMenu,
 } from "@/components";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
+    AnimatedMenu,
     SharedLayoutModal,
     BlurTiltCard,
     SpeedometerChart,

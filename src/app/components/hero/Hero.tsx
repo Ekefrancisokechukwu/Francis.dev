@@ -37,7 +37,18 @@ const Hero = () => {
       >
         I&apos;m{" "}
         <span className="font-semibold  text-neutral-300">Francis</span>, a
-        frontend-first fullstack developer and freelancer.
+        frontend-focused fullstack developer and{" "}
+        <Link
+          target="_blank"
+          href={"https://contra.com/francis_okechukwu_gm1f4lhz"}
+          title="Contra Profile"
+          className="font-semibold  text-neutral-300"
+        >
+          Freelancer
+        </Link>
+        . I build fast, responsive web apps using React, Next.js, and Tailwind
+        clean UI, scalable architecture, and smooth user experiences. I handle
+        both frontend and backend
       </motion.p>
 
       <motion.div
