@@ -48,7 +48,7 @@ const Hero = () => {
         </Link>
         . I build fast, responsive web apps using React, Next.js, and Tailwind
         clean UI, scalable architecture, and smooth user experiences. I handle
-        both frontend and backend
+        both frontend and backend.
       </motion.p>
 
       <motion.div
