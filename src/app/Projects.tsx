@@ -38,7 +38,7 @@ export const Projects = () => {
         <Link
           target="_blank"
           href="https://docs.google.com/document/d/16JpGL9NRzCYwYXio_QgHj4w_9b3UnGclQbqNZ7c4hLg/edit?tab=t.0"
-          className="bg-neutral-900 rounded-lg px-5 py-2"
+          className="bg-black text-sm rounded-lg px-5 py-1.5"
         >
           More
         </Link>
