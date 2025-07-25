@@ -1,14 +1,17 @@
 "use client";
 
 import { ChevronDown, FigmaIcon } from "lucide-react";
-import { useState } from "react";
-import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 
 const navs = [" Design resources", "Websites", "Presentations"];
 
 export const AnimatedMenu = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [dropdownSize, setDropdownSize] = useState({ width: 0, height: 0 });
 
   const handleMouseHover = (index: number) => {
     setActiveIndex(index);
@@ -23,10 +26,16 @@ export const AnimatedMenu = () => {
     1: <Content2 />,
     2: <Content3 />,
   };
-
   const content = activeIndex !== null ? contentMap[activeIndex] ?? null : null;
 
-  console.log(activeIndex);
+  useEffect(() => {
+    if (!contentRef.current || activeIndex === null) return;
+
+    const rect = contentRef.current.getBoundingClientRect();
+    console.log(rect.width, rect.height);
+
+    setDropdownSize({ width: rect.width, height: rect.height });
+  }, [activeIndex]);
 
   return (
     <div>
@@ -60,17 +69,28 @@ export const AnimatedMenu = () => {
             );
           })}
         </nav>
-        <motion.div
-          initial={{ y: 20, opacity: 0, visibility: "hidden" }}
-          animate={
-            activeIndex !== null
-              ? { y: 0, opacity: 1, visibility: "visible" }
-              : { y: 20, opacity: 0, visibility: "hidden" }
-          }
-          className="absolute top-[110%] p-5  w-max bg-neutral-950 shadow-xl rounded-2xl border border-neutral-800 z-50"
-        >
-          <div>{content}</div>
-        </motion.div>
+        <AnimatePresence>
+          {activeIndex !== null && (
+            <motion.div
+              layout
+              // transition={{
+              //   layout: { duration: 0.3, ease: [0.4, 0.0, 0.2, 1] },
+              // }}
+              className="absolute top-[110%]   bg-neutral-950 shadow-xl rounded-2xl border border-neutral-800 z-50"
+            >
+              <motion.div
+                layout
+                transition={{
+                  layout: { duration: 0.3, ease: [0.4, 0.0, 0.2, 1] },
+                }}
+                ref={contentRef}
+                className="p-5"
+              >
+                {content}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
     </div>
   );
