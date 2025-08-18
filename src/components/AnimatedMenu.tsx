@@ -79,10 +79,10 @@ export const AnimatedMenu = () => {
               className="absolute top-[110%]   bg-neutral-950 shadow-xl rounded-2xl border border-neutral-800 z-50"
             >
               <motion.div
-                layout
-                transition={{
-                  layout: { duration: 0.3, ease: [0.4, 0.0, 0.2, 1] },
-                }}
+                // layout
+                // transition={{
+                //   layout: { duration: 0.3, ease: [0.4, 0.0, 0.2, 1] },
+                // }}
                 ref={contentRef}
                 className="p-5"
               >
