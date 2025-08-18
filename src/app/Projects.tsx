@@ -37,7 +37,7 @@ export const Projects = () => {
       <div className="flex justify-center mt-8">
         <Link
           target="_blank"
-          href="https://docs.google.com/document/d/16JpGL9NRzCYwYXio_QgHj4w_9b3UnGclQbqNZ7c4hLg/edit?tab=t.0"
+          href="https://docs.google.com/document/d/16JpGL9NRzCYwYXio_QgHj4w_9b3UnGclQbqNZ7c4hLg/edit?usp=sharing"
           className="bg-black text-sm rounded-lg px-5 py-1.5"
         >
           More
